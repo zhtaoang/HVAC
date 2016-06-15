@@ -1,6 +1,8 @@
 
 public class EnvironmentController {
-	
+
+
+
 	private HVAC hvac;
 	
 	private int heaterTurnOffTimer;
@@ -12,6 +14,10 @@ public class EnvironmentController {
 	
 	public EnvironmentController(HVAC hvac) {
 		this.hvac = hvac;
+	}
+
+	public HVAC getHvac() {
+		return hvac;
 	}
 
 	public void tick() {

@@ -92,5 +92,13 @@ public class EnvironmentControllerTest {
 		Assert.assertFalse(hvac.isCoolOn());
 		Assert.assertTrue(hvac.isFanOn());
 	}
+
+	@Test
+	public void constructor(){
+		HVAC h = new HVACMock();
+		EnvironmentController ec = new EnvironmentController(h);
+
+		Assert.assertEquals(ec.getHvac(), h);
+	}
  
 }
