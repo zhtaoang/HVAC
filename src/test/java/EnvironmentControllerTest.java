@@ -35,14 +35,12 @@ public class EnvironmentControllerTest {
 	
 	@Test
 	public void fanCantRunFor5MinsAfterHeaterOff() {
+		// turning on the heater
 		hvac.setTemp(60);
 		controller.tick();
-		
-		Assert.assertTrue(hvac.isHeatOn());
-		Assert.assertFalse(hvac.isCoolOn());
-		Assert.assertTrue(hvac.isFanOn());
-		
-		// turning off the heater
+
+		// turning off the heater and turn on the cooler
+		// fan should be off for 5 minutes
 		hvac.setTemp(80);
 		controller.tick();
 		
@@ -67,14 +65,12 @@ public class EnvironmentControllerTest {
 	
 	@Test
 	public void fanCantRunFor3MinsAfterCoolerOff() {
+		// turning on the cooler
 		hvac.setTemp(80);
 		controller.tick();
-		
-		Assert.assertFalse(hvac.isHeatOn());
-		Assert.assertTrue(hvac.isCoolOn());
-		Assert.assertTrue(hvac.isFanOn());
-		
-		// turning off the cooler
+
+		// turning off the cooler and turn on the heater
+		// fan should be off for 3 minutes
 		hvac.setTemp(60);
 		controller.tick();
 		
