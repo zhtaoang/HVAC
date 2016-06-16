@@ -40,7 +40,7 @@ public class ServerSocketWrapperTest {
 	public void testServerSocketConnection() throws IOException {
 		assertTrue(client.isConnected());
 	}
-    
+
 
 
 }
