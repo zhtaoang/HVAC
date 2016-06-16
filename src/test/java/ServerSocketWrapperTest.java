@@ -27,12 +27,12 @@ public class ServerSocketWrapperTest {
 	}
 
 	@Before
-	public void setUp() throws IOException {
+	public void setUp() throws Exception {
 		client = new Socket("localhost", 9999);
 	}
 
 	@After
-	public void tearDown() throws IOException {
+	public void tearDown() throws Exception {
 		client.close();
 	}
 
