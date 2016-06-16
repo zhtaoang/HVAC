@@ -40,13 +40,7 @@ public class ServerSocketWrapperTest {
 	public void testServerSocketConnection() throws IOException {
 		assertTrue(client.isConnected());
 	}
-
-	@Test
-	public void testReadFromAndWriteToServerSocket() throws Exception {
-		CommonUtils.writeToSocket(client, "testWriteToServerSocket");
-        Thread.sleep(500);
-		assertEquals("testWriteToServerSocket", CommonUtils.readFromSocket(client));
-	}
+    
 
 
 }
