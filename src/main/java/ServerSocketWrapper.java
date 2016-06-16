@@ -4,7 +4,7 @@ import java.net.Socket;
 
 public class ServerSocketWrapper {
 
-	private final int PORT = 9999;
+	private final int PORT = Constants.PORT;
 
 	private boolean accepted = true;
 

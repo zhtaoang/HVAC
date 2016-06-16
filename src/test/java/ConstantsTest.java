@@ -8,10 +8,13 @@ import org.junit.Test;
 public class ConstantsTest {
 
     @Test
-    public void typeShouldBeString(){
+    public void tempRange(){
         assert(Constants.INVALID_TEMP_RANGE_MESSAGE.contains(Constants.getInvalidTempRangeMessage()));
     }
 
-
+    @Test
+    public void port(){
+        assert(Constants.PORT==Constants.getPORT());
+    }
 
 }

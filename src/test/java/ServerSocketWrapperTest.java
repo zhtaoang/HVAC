@@ -16,7 +16,7 @@ public class ServerSocketWrapperTest {
 	public static void beforeClass() {
 		new Thread() {
 			public void run() {
-				String[] args = new String[]{};
+				String[] args = new String[]{"65", "75"};
 				try {
 					HVACMain.main(args);
 				} catch (IOException e) {
@@ -28,7 +28,7 @@ public class ServerSocketWrapperTest {
 
 	@Before
 	public void setUp() throws Exception {
-		client = new Socket("localhost", 9999);
+		client = new Socket("localhost", Constants.PORT);
 	}
 
 	@After
