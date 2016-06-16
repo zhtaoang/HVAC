@@ -1,6 +1,5 @@
 import org.junit.Test;
 
-import static org.assertj.core.api.Assertions.*;
 
 
 /**
@@ -10,7 +9,7 @@ public class ConstantsTest {
 
     @Test
     public void typeShouldBeString(){
-        assertThat(Constants.INVALID_TEMP_RANGE_MESSAGE.contains(Constants.getInvalidTempRangeMessage()));
+        assert(Constants.INVALID_TEMP_RANGE_MESSAGE.contains(Constants.getInvalidTempRangeMessage()));
     }
 
 
