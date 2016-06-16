@@ -42,8 +42,9 @@ public class ServerSocketWrapperTest {
 	}
 
 	@Test
-	public void testReadFromAndWriteToServerSocket() throws IOException, InterruptedException {
+	public void testReadFromAndWriteToServerSocket() throws Exception {
 		CommonUtils.writeToSocket(client, "testWriteToServerSocket");
+        Thread.sleep(500);
 		assertEquals("testWriteToServerSocket", CommonUtils.readFromSocket(client));
 	}
 
